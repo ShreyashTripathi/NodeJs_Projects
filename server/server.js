@@ -11,7 +11,6 @@ const typeDefs = gql`
 
 //defined resolvers (can be any data source including DB / any other API)
 const resolvers = {
-  // Actual GQL query
     Query:{
       id: () => 69,  
       name: () => 'Scarlett',
