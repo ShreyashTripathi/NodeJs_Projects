@@ -2,7 +2,8 @@
   "name": "nodejs_graphql",
   "version": "1.0.0",
   "description": "This is a demo project, aimed at learning the functioning of Apollo Server Client and fetching data thru GraphQL. ",
-  "main": "index.js",
+  "main": "server.js",
+  "type": "module" ,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "apollo-datasource-rest": "^3.5.1",
     "apollo-server": "^3.6.2",
     "graphql": "^16.3.0"
   }
