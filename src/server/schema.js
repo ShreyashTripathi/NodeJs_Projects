@@ -8,6 +8,7 @@ export const typeDefs = gql`
     overview: String
   }
   type Query {
-    nowPlayingMovies: [movie!]
+    movie(id: Int!): movie!
+    nowPlayingMovies(limit: Int): [movie!]
   }
 `;

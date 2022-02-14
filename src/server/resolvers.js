@@ -3,11 +3,13 @@
 export const resolvers = {
   Query:
     {
-      // movie: async (_, { id }, { datasource }) => {
-      //   return movieAPI.getMovie(id);
-      // },
-      nowPlayingMovies: async (_, __, { datasource }) => {
-        return datasource.movieAPI.getNowPlayingMovies();
+      // Query resolver defined to get a specific movie based on movie_id passed as query param
+      movie: async (_, args, { dataSources }) => {
+        return dataSources.movieAPI.getMovie(args.id);
+      },
+      // Query resolver defined to get a list of all now_playing_movies
+      nowPlayingMovies: async (_, args, { dataSources },info) => {
+        return dataSources.movieAPI.getNowPlayingMovies(args);
       }
     }
 };
